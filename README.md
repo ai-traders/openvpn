@@ -72,6 +72,18 @@ The following are for the default values for fields place in the certificate fro
 * `node['openvpn']['key']['org']` - `KEY_ORG`
 * `node['openvpn']['key']['email']` - `KEY_EMAIL`
 
+`node['openvpn']['easyrsa']['extra_options']` can be used to set additional options
+which should be included in **client** configuration when generating keys with easy-rsa.
+Example:
+
+```ruby
+override['openvpn']['easyrsa']['extra_options'] = {
+  'up' => '/etc/openvpn/update-resolv-conf',
+  'down' => '/etc/openvpn/update-resolv-conf',
+  'script-security' => '2'
+}
+```
+
 
 Recipes
 -------

@@ -89,3 +89,5 @@ when 'server'
 when 'server-bridge'
   default['openvpn']['config']['dev'] = 'tap0'
 end
+
+default['openvpn']['easyrsa']['extra_options'] = nil
